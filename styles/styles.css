@@ -7,14 +7,128 @@
 }
 
 .page-header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 147px;
+    z-index: 100;
 }
+
+.page-header::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(222, 222, 222, 0.5);
+    @supports (backdrop-filter: blur(10px)){
+        backdrop-filter: blur(10px);
+        background-color: rgba(222, 222, 222, 0.5);
+    }
+}
+
+.page-header_container{
+    box-sizing: border-box;
+    position: relative;
+    margin: 0 auto;
+    padding-left: 40px;
+    padding-right: 40px;
+    max-width: 1414px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.page-header_logo{
+    margin-right: 202px;
+    height: 147;
+    margin-right: 237px;
+    display: inline-block;
+}
+
+.page-headre_nav{
+    display: inline-block;
+    display: flex;
+    flex-direction: row;
+    margin-right: 230px;
+}
+
 .page-header_nav-link{
     margin: 0 25px;
-    color: #000;
+    color: #000000;
     font-weight: 600;
     font-size: 18px;
     line-height: 25px;
     text-decoration: none;
+}
+
+.page-header__buttonuser {
+    border: 1px solid var(--1, #1F1E1E);
+    color: #1F1E1E;
+    background-color: transparent;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: normal;
+    box-sizing: border-box;
+    padding: 15px 40px;
+}
+
+.home{
+    padding-top: 147px;
+}
+
+.main-header_title,
+.main-header_text {
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: center;
+    margin-top: 70px;
+    text-transform: uppercase;
+    font-family: "Lora", sans-serif;
+    font-weight: 400;
+    font-size: 45px;
+    line-height: normal;
+    color: #1F1E1E;
+}
+
+.main-header_title{
+    margin:  0 0 70px;
+}
+
+.main-header_text {
+    margin: 0 auto;
+    max-width: 948px;
+    width: 100%;
+}
+
+.main-header_picture{
+    display: block;
+    position: relative;
+    width: 100%;
+    margin-bottom: 70px;
+}
+
+.main-header_picture::before{
+    content: '';
+    display: block;
+    width: 100%;
+    padding-top: 16.927%;
+}
+
+.main-header_img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.main-header{
+    padding: 100px 0;
 }
 
 .page-footer{
